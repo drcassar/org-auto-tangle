@@ -167,7 +167,7 @@ Assume buffer is in Org mode.  Narrowing, if any, is ignored."
        (require 'org)
        (let ((start-time (current-time))
              (non-essential t)
-             (org-confirm-babel-evaluate t))
+             (org-confirm-babel-evaluate nil))
          (cl-progv (mapcar #'car preserved) (mapcar #'cdr preserved)
            (org-babel-tangle-file file))
          (format "%.2f" (float-time (time-since start-time))))))
