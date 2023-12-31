@@ -162,7 +162,7 @@ Assume buffer is in Org mode.  Narrowing, if any, is ignored."
                                        org-babel-pre-tangle-hook
                                        org-babel-post-tangle-hook)
                                      with-vars)))
-          (evaluate (not (member file org-auto-tangle-babel-safelist))))
+          (evaluate t))
      (lambda ()
        (require 'org)
        (let ((start-time (current-time))
